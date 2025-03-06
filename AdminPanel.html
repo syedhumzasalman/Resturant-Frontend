@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgLU7prhSBcuCC7dhU9eTPSjqJLLaSNybzw&s" type="image/x-icon">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/boostrap.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-color">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li>
+                            <a href="" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Home</span> <ion-icon class="ms-1 d-sm-none" name="home-outline"></ion-icon> </a>
+                        </li>
+                        <li>
+                            <a   onclick="resturant()" class="nav-link px-0 align-middle cursor-pointer">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Resturants</span> <ion-icon class="ms-1 d-sm-none" name="restaurant-outline"></ion-icon></a>
+                        </li>
+                        <li>
+                            <a  onclick="dishes()" data-bs-toggle="collapse" class="nav-link px-0 align-middle cursor-pointer">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Dishes</span> <ion-icon class="ms-1 d-sm-none" name="restaurant-sharp"></ion-icon></a>
+                        </li>
+                        <li>
+                            <a  onclick="products()" data-bs-toggle="collapse" class="nav-link px-0 align-middle cursor-pointer">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> <ion-icon class="ms-1 d-sm-none" name="cube-sharp"></ion-icon> </a>
+                        </li>
+                        <li>
+                            <a  onclick="customers()" class="nav-link px-0 align-middle cursor-pointer">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> <ion-icon class="ms-1 d-sm-none" name="walk"></ion-icon></a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">Admin</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3 bg-white" id="contentArea">
+               <div class="home-section d-flex justify-content-center align-items-center">
+                <span class="lh-lg ms-3 animate__animated animate__bounceInDown"><p class="fw-bold fs-3 animate__animated animate__bounceInDown">Welcome to the Admin Panel! </p>
+                    <p class="fw-bold fs-5 animate__animated animate__bounceInDown">Hello, Admin! 👋</p>
+                   <p> We’re glad to have you. Hope you're having a productive day! 😊</p>
+                     This is your command center, where you can manage, create, and innovate effortlessly. Every great system needs a great leader—and that’s YOU! 🚀
+                     Stay in control, keep things running smoothly, and let’s make great things happen! 🎯</span>
+                <img class="animate__animated animate__bounceInDown" src="images/Businessman Holding Umbrella.gif" alt="Manager-Picture">
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
+    <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

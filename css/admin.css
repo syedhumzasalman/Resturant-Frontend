@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-color{
+    background-color: #1E1E1E !important;
+}
+
+.nav-link{
+    color: #B0BEC5;
+}
+
+.nav-link:hover{
+    color: #FF6B6B;
+}
+
+.cursor-pointer {
+    cursor: pointer; 
+}
+
+.Resturantclass{
+    /* background-color: #FF6B6B; */
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Resturantclass label input{
+    padding: 5px;
+    width: 400px;
+    border: 1px solid rgb(141, 137, 137);
+    outline: none;
+    box-shadow: 10px 15px 5px rgb(68, 66, 66);
+}
+
+.mytext{
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #1E1E1E;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .home-section{
+        flex-direction: column;
+    }
+    .home-section span p{
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .Resturantclass{
+        width: 100%;
+    }
+    .Resturantclass label input{
+        width: 100%;
+    }
+}
