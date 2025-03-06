@@ -16,12 +16,12 @@
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-color">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                     <a href="" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5">Menu</span>
+                        <span class="fs-5">Home</span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li>
-                            <a href="" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Home</span> <ion-icon class="ms-1 d-sm-none" name="home-outline"></ion-icon> </a>
+                            <a onclick="Dashboard()" data-bs-toggle="collapse" class="nav-link px-0 align-middle cursor-pointer">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> <ion-icon class="ms-1 d-sm-none" name="home-outline"></ion-icon> </a>
                         </li>
                         <li>
                             <a   onclick="resturant()" class="nav-link px-0 align-middle cursor-pointer">
@@ -32,16 +32,16 @@
                                 <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Dishes</span> <ion-icon class="ms-1 d-sm-none" name="restaurant-sharp"></ion-icon></a>
                         </li>
                         <li>
-                            <a  onclick="products()" data-bs-toggle="collapse" class="nav-link px-0 align-middle cursor-pointer">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> <ion-icon class="ms-1 d-sm-none" name="cube-sharp"></ion-icon> </a>
+                            <a  onclick="OnlineDelivery()" data-bs-toggle="collapse" class="nav-link px-0 align-middle cursor-pointer">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Online Delivery</span> <ion-icon class="ms-1 d-sm-none" name="cube-sharp"></ion-icon> </a>
                         </li>
                         <li>
                             <a  onclick="customers()" class="nav-link px-0 align-middle cursor-pointer">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> <ion-icon class="ms-1 d-sm-none" name="walk"></ion-icon></a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers Services</span> <ion-icon class="ms-1 d-sm-none" name="walk"></ion-icon></a>
                         </li>
                     </ul>
                     <hr>
-                    <div class="dropdown pb-4">
+                    <!-- <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                             <span class="d-none d-sm-inline mx-1">Admin</span>
@@ -55,12 +55,12 @@
                             </li>
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col py-3 bg-white" id="contentArea">
                <div class="home-section d-flex justify-content-center align-items-center">
-                <span class="lh-lg ms-3 animate__animated animate__bounceInDown"><p class="fw-bold fs-3 animate__animated animate__bounceInDown">Welcome to the Admin Panel! </p>
+                <span class="lh-lg ms-md-3 animate__animated animate__bounceInDown"><p class="fw-bold fs-3 animate__animated animate__bounceInDown">Welcome to the Admin Panel! </p>
                     <p class="fw-bold fs-5 animate__animated animate__bounceInDown">Hello, Admin! 👋</p>
                    <p> We’re glad to have you. Hope you're having a productive day! 😊</p>
                      This is your command center, where you can manage, create, and innovate effortlessly. Every great system needs a great leader—and that’s YOU! 🚀
@@ -70,7 +70,6 @@
             </div>
         </div>
     </div>
-
 
     
 
