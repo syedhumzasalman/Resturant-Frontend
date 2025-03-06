@@ -128,7 +128,17 @@ if (isDuplicate) {
 
   resturantlist.push(resturantobj);
 
-  localStorage.setItem("resturants", JSON.stringify(resturantlist))
+  localStorage.setItem("resturants", JSON.stringify(resturantlist));
+
+  Swal.fire({
+    title: "Restaurant Added Successfully!",
+    text: `${name.value} has been added.`,
+    imageUrl: "images/cartoon-567_256.gif",
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: "Restaurant Logo",
+    confirmButtonText: "OK",
+  });
 
   name.value = "";
   description.value = "";
@@ -186,7 +196,17 @@ dishesobj.dselector = dselector.value;
 
 disheslist.push(dishesobj);
 
-localStorage.setItem("dishes", JSON.stringify(disheslist))
+localStorage.setItem("dishes", JSON.stringify(disheslist));
+
+Swal.fire({
+  title: "Dishe Added Successfully!",
+  text: `${dname.value} has been added.`,
+  imageUrl: "images/cartoon-567_256.gif",
+  imageWidth: 200,
+  imageHeight: 200,
+  imageAlt: "Restaurant Logo",
+  confirmButtonText: "OK",
+});
 
 dname.value = "";
 ddescription.value = "";
@@ -253,9 +273,59 @@ function dishes(){
 
 
 function Dashboard() {
+  let resturantlist = JSON.parse(localStorage.getItem("resturants")) || [];
+  let disheslist = JSON.parse(localStorage.getItem("dishes")) || [];
   
-  contentArea.innerHTML = `<h1 class="text-center mytext">LIST OF RESTURANT AND DISHES</h1>`
+  contentArea.innerHTML = `<h1 class="text-center mytext">LIST OF RESTURANT</h1>`
+
+  if (resturantlist.length === 0) {
+    contentArea.innerHTML += `<h3 class="text-center text-muted">No Restaurants Added Yet!</h3>
+    <div class="col text-center mt-5">
+          <img src="https://media.tenor.com/9wiWrdXtgmoAAAAM/mrbean-checkingtime.gif" class="img-fluid w-50 rounded shadow-lg" alt="Restaurant Image">
+    </div>`;
+    return;
+  }
+
+  contentArea.innerHTML += `
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        
+        <!-- Left Section: Fixed Image -->
+        <div class="col-md-5 mt-3 text-center position-sticky top-0 pic">
+          <img src="https://i.graphicmama.com/uploads/2023/3/641474d2937c2-Nick%20Smartman%20Animated%20GIFs%20Collection.gif" class="img-fluid rounded shadow-lg" alt="Restaurant Image">
+        </div>
+
+        <!-- Right Section: Scrollable Restaurant List -->
+        <div class="col-md-6 fullwidth" style="max-height: 500px; overflow-y: auto;">
+          ${resturantlist
+            .map(
+              (restaurant) => `
+              <div class="card shadow-lg p-4 mb-4 bg-white rounded">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="${restaurant.logo}" class="rounded-circle border border-secondary" width="90" height="90">
+                  <div>
+                    <h4 class="text-primary fw-bold">${restaurant.name}</h4>
+                    <p class="text-muted">${restaurant.description}</p>
+                    <p><strong>📍 Address:</strong> ${restaurant.address}</p>
+                    <p><strong>📞 Contact:</strong> ${restaurant.number}</p>
+                  </div>
+                </div>
+                <hr class="mt-2">
+              </div>
+            `
+            )
+            .join("")}
+        </div>
+
+      </div>
+    </div>
+  `;
+
 }
+   
+
+
+
 
 
 
@@ -266,7 +336,10 @@ function OnlineDelivery(){
     Swal.fire({
       title: "🚧 Under Maintenance 🚧",
       text: "We are currently working on the Online Delivery section. Please check back in a while.",
-      icon: "warning",
+      imageUrl: "images/gif/Truck delivery service.gif",
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: "Restaurant Logo",
       confirmButtonText: "OK",
       allowOutsideClick: false,
       allowEscapeKey: false
@@ -278,7 +351,10 @@ function customers(){
   Swal.fire({
     title: "🚧 Under Maintenance 🚧",
     text: "We are currently working on the customers section. Please check back in a while.",
-    icon: "warning",
+    imageUrl: "images/gif/Online Delivery Service.gif",
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: "Restaurant Logo",
     confirmButtonText: "OK",
     allowOutsideClick: false,
     allowEscapeKey: false
