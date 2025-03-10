@@ -10,7 +10,7 @@ document.body.innerHTML += `
             z-index: -1;
         ""></video>`;
 
-let adminEmail = localStorage.setItem("Email",JSON.stringify("resturantadmin@gmail.com"));
+let adminEmail = localStorage.setItem("Email",JSON.stringify("restaurantadmin@gmail.com"));
 let adminPassword = localStorage.setItem("Password", JSON.stringify("admin123"));
 
 
