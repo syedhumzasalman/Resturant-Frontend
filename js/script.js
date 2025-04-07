@@ -281,7 +281,7 @@ function Dashboard() {
   if (resturantlist.length === 0) {
     contentArea.innerHTML += `<h3 class="text-center text-muted">No Restaurants Added Yet!</h3>
     <div class="col text-center mt-5">
-          <img src="https://media.tenor.com/9wiWrdXtgmoAAAAM/mrbean-checkingtime.gif" class="img-fluid w-50 rounded shadow-lg" alt="Restaurant Image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSytTKp2C3C47Sk1dcpN5ZWmYdLZsF6ZMeRAg&s" class="img-fluid w-50 rounded shadow-lg" alt="Restaurant Image">
     </div>`;
     return;
   }
